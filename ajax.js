@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  
+
     
    
 
@@ -7,7 +9,7 @@ $(document).ready(function () {
     function regsuccess(response) {
 
         $("#mcon").html(response);
-        $("#mess").fadeout(3000);
+        $("#mess").fadeOut(10000);
 
         
     };

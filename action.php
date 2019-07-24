@@ -5,14 +5,14 @@ include 'core.php';
 
 if (isset($_GET['dollar'])) {
 
-if ($_GET['dollar']=reg) {
+if ($_GET['dollar']=="reg") {
 
 
 
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $email=$_POST['email'];
-$contact=$_POS['contact'];
+$contact=$_POST['contact'];
 $dob=$_POST['dob'];
 $gender=$_POST['gender'];
 $town=$_POST['town'];
@@ -35,7 +35,7 @@ $doa=$dd;
 $status="Pending";
 
 // check if applicant exist  in database
-echo "hi there";
+echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status);
 
 // echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status);
     # code...
