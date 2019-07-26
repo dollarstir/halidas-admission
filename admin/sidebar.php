@@ -45,7 +45,7 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                     <li class="menu">
                         <a href="#pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
-                                <i class="flaticon-cart-bag"></i>
+                            <i class="fa fa-user"></i>
                                 <span>Applicants</span>
                             </div>
                             <div>
@@ -57,7 +57,7 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                                 <a href="#">Add Applicant</a>
                             </li>
                             <li>
-                                <a href="#"> View Applicants </a>
+                                <a href="vap.php"> View Applicants </a>
                             </li>
 
                            
@@ -75,7 +75,7 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                 <li class="menu">
                     <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <div class="">
-                            <i class="flaticon-user-group"></i>
+                        <i class="fa fa-book"></i>
                             <span>Programmes</span>
                         </div>
                         <div>
@@ -167,6 +167,122 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                         </ul>
                     </li>
 
+
+
+                    <li class="menu">
+                        <a href="#elements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i class="flaticon-layers"></i>
+                                <span>Notice Board</span>
+                            </div>
+                            <div>
+                                <i class="flaticon-right-arrow"></i>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="elements" data-parent="#accordionExample">
+                            <li>
+                                <a href="element_steps.html"> Add Notice </a>
+                            </li>
+                            <li>
+                                <a href="element_steps.html"> View Notice </a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+
+
+
+
+                    <li class="menu">
+                        <a href="#editors" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i class="flaticon-edit-2"></i>
+                                <span>Examinations</span>
+                            </div>
+                            <div>
+                                <i class="flaticon-right-arrow"></i>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="editors" data-parent="#accordionExample">
+                            <li>
+                                <a href="editor_tinymce.html"> Add Exams </a>
+                            </li>
+                            <li>
+                                <a href="editor_quill.html">View Exams Certificate </a>
+                            </li>
+                            <li>
+                                <a href="editor_markdown.html"> Markdown </a>
+                            </li>
+                            <li>
+                                <a href="editor_contenttools.html"> ContentTools </a>
+                            </li>
+                            <li>
+                                <a href="editor_summernote.html"> Summernote </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="menu">
+                        <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i class="flaticon-user-group"></i>
+                                <span>Teacher</span>
+                            </div>
+                            <div>
+                                <i class="flaticon-right-arrow"></i>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="tables" data-parent="#accordionExample">
+                            <li>
+                                <a href="table_basic.html"> Add Teacher </a>
+                            </li>
+                            <li>
+                                <a href="table_tablesaw.html"> View Teachers</a>
+                            </li>
+                            
+                            
+                            
+                        </ul>
+                    </li>
+
+
+                    
+                     <li class="menu">
+                        <a href="#maps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                            <i class="fa fa-cog"></i>
+                                <span>Settings</span>
+                            </div>
+                            <div>
+                                <i class="flaticon-right-arrow"></i>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="maps" data-parent="#accordionExample">
+                            
+                            
+                            <li>
+                                <a href="#"> Title </a>
+                            </li>
+                            <li>
+                                <a href="#"> Users </a>
+                            </li>
+
+                            <li>
+                                <a href="#"> App </a>
+                            </li>
+                            <li>
+                                <a href="#"> Currency </a>
+                            </li>
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                            <li>
+                                <a href="#"> OpenLayers </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
                     
                 </ul>
             </nav>
