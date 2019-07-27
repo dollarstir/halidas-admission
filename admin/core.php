@@ -75,32 +75,39 @@ while ($rgo=mysqli_fetch_array($geto))
 
 
 
-function getucc() 
+function getapplicant() 
 {
 include "db.php";
+$yoa = date("Y");
 
-$geto=mysqli_query($conn,"SELECT * FROM orders  WHERE venue='ucc'");
+$geto=mysqli_query($conn,"SELECT * FROM applicant  WHERE yoa='$yoa'");
 
 while ($rgo=mysqli_fetch_array($geto)) 
 {
    $id= $rgo['id'];
-   $inv=$rgo['inv'];
-   $name=$rgo['name'];
+   
+   $name=$rgo['fname']." ".$rgo['lname'];
    $email=$rgo['email'];
    $contact=$rgo['contact'];
-   $quant=$rgo['quant'];
-   $venue=$rgo['venue'];
-   $date=$rgo['do'];
+   $pic=$rgo['pic'];
+   $town=$rgo['town'];
+   $doa=$rgo['doa'];
 $status=$rgo['status'];
+$programme=$rgo['programe'];
   echo' <tr>
                                                 <td>'.$id.'</td>
                                                 <td>'.$name.'</td>
                                                 <td>'.$email.'</td>
                                                 <td>'.$contact.'</td>
+                                                <td>'.$programme.'</td>
+                                                
                                                
-                                                <td>'.$quant.'</td>
-                                                <td>'.$venue.'</td>
-                                                <td>'.$date.'</td>
+                                              
+                                                <td>'.$town.'</td>
+                                                <td>'.$doa.'</td>
+
+
+                                                <td><img src="../'.$pic.'" width="100px" height="100px"></td>
                                                 
                                                 <td class="align-center"><span class="badge badge-primary">'.$status.'</span></td>
                                                 

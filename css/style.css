@@ -243,7 +243,7 @@ body {
 .register-form-w3layouts {
     box-sizing: border-box;
     padding: 3vw;
-    background: rgba(0, 0, 0, 0.78);
+    background: rgb(16, 17, 17);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -443,6 +443,7 @@ input#datepicker {
     border-bottom: 1px solid rgba(255, 255, 255, 0.27);
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
 }
 
 .register-form-w3layouts textarea {

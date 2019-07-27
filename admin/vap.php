@@ -25,7 +25,7 @@ include "core.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Success Africa  </title>
+    <title>Halidas College  </title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
@@ -128,13 +128,13 @@ include "core.php";
             <div class="container">
                 <div class="page-header">
                     <div class="page-title">
-                        <h3>UNIVERSITY OF CAPE COAST</h3>
+                        <h3>APPLICANT LIST</h3>
                         <div class="crumbs">
                             <ul id="breadcrumbs" class="breadcrumb">
                                 <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                                 <li><a href="#">Venue</a></li>
                                
-                                <li class="active"><a href="#">UNIVERSITY OF CAPE COAST</a> </li>
+                                <li class="active"><a href="#">APPLICANT LIST</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -147,7 +147,7 @@ include "core.php";
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>UNIVERSITY OF CAPE COAST</h4>
+                                        <h4>APPLICANT LIST</h4>
                                     </div>                 
                                 </div>
                             </div>
@@ -160,10 +160,12 @@ include "core.php";
                                                 <th>Name</th>
                                                 <th>Email</th>
                                                 <th>Contact</th>
-                                                <th>Qnt</th>
-                                                <th>Location</th>
+                                                <th>Programme</th>
                                                 
-                                                <th>Ordered On.</th>
+                                                <th>Location</th>
+                                                <th>Date</th>
+                                                
+                                                <th>Picture</th>
                                                 <th>Status</th>
                                                 <!-- <th class="invisible"></th> -->
                                                 <th>Action </th>
@@ -173,7 +175,7 @@ include "core.php";
                                             <?php 
                                             
                                             include "db.php";
-                                            echo  getucc() ;
+                                            echo  getapplicant()  ;
                                             
                                             
                                             ?>

@@ -33,9 +33,10 @@ $pcontact=$_POST['pcontact'];
 $dd= date("jS F, Y");
 $doa=$dd;
 $status="Pending";
+$yoa= date("Y");
 
 // check if applicant exist  in database
-echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status);
+echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status,$yoa);
 
 // echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status);
     # code...

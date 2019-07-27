@@ -1,5 +1,5 @@
 <?php
-function reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status)
+function reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status,$yoa)
 {
 
     include 'db.php';
@@ -16,7 +16,7 @@ function reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,
         $newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
         move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $newFilename);
         $pic="upload/" . $newFilename;
-        $insert=mysqli_query($conn,"INSERT INTO applicant (fname,lname,email,contact,dob,gender,town,nation,sex,pob,position,rel,pic,s1,c1,start,end,programe,pname,native,pcontact,doa,status) VALUES ('$fname','$lname','$email','$contact','$dob','$gender','$town','$nation','$sex','$pob','$position','$rel','$pic','$s1','$c1','$start','$end','$programe','$pname','$native','$pcontact','$doa','$status')");
+        $insert=mysqli_query($conn,"INSERT INTO applicant (fname,lname,email,contact,dob,gender,town,nation,sex,pob,position,rel,pic,s1,c1,start,end,programe,pname,native,pcontact,doa,status,yoa) VALUES ('$fname','$lname','$email','$contact','$dob','$gender','$town','$nation','$sex','$pob','$position','$rel','$pic','$s1','$c1','$start','$end','$programe','$pname','$native','$pcontact','$doa','$status','$yoa')");
 
         if ($insert) {
             # code...
