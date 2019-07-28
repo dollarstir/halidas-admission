@@ -21,7 +21,7 @@ if ($newo) {
 function footer() {
     $dy=date("Y");
 
-    echo' 					<p style="background-color:rgba(0, 0, 0, 0.836);">© '.$dy.' ticket ordering form. All rights reserved | Design by <a href="http://purplesofts.com/" target="blank">Purple Software.</a></p>';
+    echo' 					<p style="background-color:rgba(0, 0, 0, 0.836);">© '.$dy.' HCT. All rights reserved | Design by <a href="http://purplesofts.com/" target="blank">Purple Software.</a></p>';
 
 }
 
@@ -65,7 +65,7 @@ while ($rgo=mysqli_fetch_array($geto))
                                                 </td> -->
                                                 <td>
                                                 <br>
-                                                <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Delivered</a>                                                 </td>
+                                                <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Approve</a>                                                 </td>
                                                 </td>
                                             </tr>';
 }
@@ -121,12 +121,27 @@ $programme=$rgo['programe'];
                                                     dfhdghdfjh
                                                 </td> -->
                                                 <td>
-                                                <br>
-                                                <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Delivered</a>                                                 </td>
+                                                <br>';
+                                                if ($status=="Approved") {
+
+                                                    echo '';
+                                                    # code...
+                                                }
+                                                else {
+                                                    echo ' <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Approve</a>   ';
+                                                }
+
+                                                echo '
+                                                                                             </td>
                                             </tr>';
 }
 
 }
+
+
+
+
+
 
 
 
@@ -197,14 +212,70 @@ function login($email,$password)
     } else {
         echo    "please enter correct details";
     }
-    
-
 }
 
 
 
 
+function getvoucher() 
+{
+include "db.php";
+$batch = date("Y");
 
+$getvol=mysqli_query($conn,"SELECT * FROM voucher  WHERE  batch='$batch' ");
+
+    while ($rgvol=mysqli_fetch_array($getvol)) 
+    {
+        $id= $rgvol['id'];
+        
+       
+        $serial=$rgvol['serial'];
+        $pin=$rgvol['pin'];
+       
+        
+        $status=$rgvol['status'];
+        $batch=$rgvol['batch'];
+        $ustatus=$rgvol['ustatus'];
+        echo' <tr>
+                                                       
+                                                <td>'.$serial.'</td>
+                                                <td>'.$pin.'</td>';
+                                                if ($status=="Sold") {
+                                                echo '<td class="align-center"><span class="badge badge-danger">'.$status.'</span></td>';
+
+                                                }
+                                                else {
+                                                    echo '<td class="align-center"><span class="badge badge-primary">'.$status.'</span></td>';
+                                                }
+
+                                              echo 
+
+                                                '<td>'.$ustatus.'</td>
+                                                <td>'.$batch.'</td>
+                                                
+                                               
+                                              
+                                                
+
+
+                                                
+                                                
+                                                
+                                                <td>
+                                                <br>';
+                                                if ($status=="Sold") {
+                                                    echo '';
+                                                }
+                                                else {
+                                                   echo ' <a href="sellvol.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Sell</a> ';
+                                                }
+
+                                                echo '
+                                                                                               </td>
+                                            </tr>';
+    }
+
+}
 
 ?>
 

@@ -4,7 +4,7 @@ include "db.php";
 
 
         $co=mysqli_query($conn,"SELECT * FROM voucher  WHERE status
-        ='$dateSold'");
+        ='Sold'");
         $result3=mysqli_num_rows($co);
              if ($result3 >= 1) {
 

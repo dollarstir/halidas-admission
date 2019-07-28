@@ -142,24 +142,10 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                                 <a href="gen_voucher.php">Add Voucher</a>
                             </li>
                             <li>
-                                <a href="#"> View All Vouchers</a>
+                                <a href="vvol.php"> View All Vouchers</a>
                             </li>
 
-                            <li>
-                            <a href="#">UCC-Vouchers </a>
-                             </li>
-
-                             <li>
-                            <a href="#"> HoTECH- Vouchers </a>
-                             </li>
-
-                             <li>
-                            <a href="#"> KNUST- Vouchers </a>
-                             </li>
-
-                             <li>
-                            <a href="#"> LEGON- Vouchers </a>
-                             </li>
+                           
                             
                             
                            

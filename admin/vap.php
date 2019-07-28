@@ -126,7 +126,7 @@ include "core.php";
         <!--  BEGIN CONTENT PART  -->
         <div id="content" class="main-content">
             <div class="container">
-                <div class="page-header">
+                <!-- <div class="page-header">
                     <div class="page-title">
                         <h3>APPLICANT LIST</h3>
                         <div class="crumbs">
@@ -138,7 +138,7 @@ include "core.php";
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
                 <div class="row" id="cancel-row">
                 
@@ -147,7 +147,7 @@ include "core.php";
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>APPLICANT LIST</h4>
+                                        <u><center><h4>APPLICANT LIST</h4></center></u>
                                     </div>                 
                                 </div>
                             </div>

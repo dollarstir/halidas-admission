@@ -1696,12 +1696,16 @@
                                         <!-- <label for="exampleFormControlInput1">Quantity</label> -->
                                         <input name="quant" type="number" class="form-control-rounded form-control" id="exampleFormControlInput1" placeholder=" Enter quantity to generate">
                                     </div>
+
+
+
+                                    
                                     <!-- <style>
                                         .disp {
                                             display: none;
                                         }
                                     </style> -->
-                                    <div class="form-group mb-4">
+                                    <!-- <div class="form-group mb-4">
                                       
                                         <select name="location" class="form-control-rounded form-control" id="exampleFormControlSelect1">
                                             <option value="">Choose Campus</option>
@@ -1711,7 +1715,7 @@
                                             <option value="hotech">HO TECH</option>
                                            
                                         </select>
-                                    </div>
+                                    </div> -->
                                     
                                    
                                     <input type="submit" name="sub" class="mt-4 mb-4 btn btn-button-7 btn-rounded sub" value="Generate" style="margin-left:150px;background-color:green !important;">
