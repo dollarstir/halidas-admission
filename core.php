@@ -12,27 +12,30 @@ function reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,
             </div>';
     }
     else {
-        $fileinfo=PATHINFO($_FILES["image"]["name"]);
-        $newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
-        move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $newFilename);
-        $pic="upload/" . $newFilename;
-        $insert=mysqli_query($conn,"INSERT INTO applicant (fname,lname,email,contact,dob,gender,town,nation,sex,pob,position,rel,pic,s1,c1,start,end,programe,pname,native,pcontact,doa,status,yoa) VALUES ('$fname','$lname','$email','$contact','$dob','$gender','$town','$nation','$sex','$pob','$position','$rel','$pic','$s1','$c1','$start','$end','$programe','$pname','$native','$pcontact','$doa','$status','$yoa')");
+        
 
-        if ($insert) {
-            # code...
-            echo '
-            <div id="mess">
-                <p id="mm">Registration Successful</p>
-            </div>';
-        }
-        else {
-            # code...
+                $fileinfo=PATHINFO($_FILES["image"]["name"]);
+                $newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
+                move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $newFilename);
+                $pic="upload/" . $newFilename;
+                $insert=mysqli_query($conn,"INSERT INTO applicant (fname,lname,email,contact,dob,gender,town,nation,sex,pob,position,rel,pic,s1,c1,start,end,programe,pname,native,pcontact,doa,status,yoa) VALUES ('$fname','$lname','$email','$contact','$dob','$gender','$town','$nation','$sex','$pob','$position','$rel','$pic','$s1','$c1','$start','$end','$programe','$pname','$native','$pcontact','$doa','$status','$yoa')");
 
-            echo '
-            <div id="mess" style="background-color:red;">
-                <p id="Registration failed</p>
-            </div>';
-        }
+                if ($insert) {
+                    # code...
+                    echo '
+                    <div id="mess">
+                        <p id="mm">Registration Successful</p>
+                    </div>';
+                }
+                else {
+                    # code...
+
+                    echo '
+                    <div id="mess" style="background-color:red;">
+                        <p id="mm">Registration failed</p>
+                    </div>';
+                }
+        
     }
 }
 

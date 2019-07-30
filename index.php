@@ -50,7 +50,7 @@ Author URL: http://purplesofts.com
 	<div class="avatar-upload">
         <div class="avatar-edit">
 			
-            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="image" />
+            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="image" required=""/>
             <label for="imageUpload"><i class="fas fa-camera" style="position:absolute;font-size:25px;color:white;margin-left:40px; z-index: 1;"></i><br><p style="color:white;margin-top:6px;position:center;margin-left:5px;">Browse Image</p></label>
         </div>
         <div class="avatar-preview">
