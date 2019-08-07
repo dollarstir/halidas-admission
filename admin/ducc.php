@@ -1,5 +1,5 @@
 <?php
-include "../db.php";
+include "db.php";
 $id= $_GET['oid'];
 $dl=mysqli_query($conn,"UPDATE applicant SET  status='Approved' WHERE id='$id' ");
 

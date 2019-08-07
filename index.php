@@ -1,8 +1,19 @@
 <!--A Design by Dollar Stir
-Author: W3layout
+Author: Dollarstir
 Author URL: http://purplesofts.com
 
 -->
+
+<?php include 'core.php'; 
+
+session_start();
+
+if (!isset($_SESSION['serial'])) {
+	
+	echo '<script> window.location="verify.php"</script>';
+	# code...
+}
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -32,6 +43,7 @@ Author URL: http://purplesofts.com
 	<!--fonts-->
 	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!--//fonts-->
 </head>
 
@@ -160,9 +172,7 @@ Author URL: http://purplesofts.com
 				<div class="field-agileinfo-spc form-w3-agile-text1">
 					<select class="form-control" required="" name="programe">
 						<option value="">Choose Programe</option>
-						<option value="Single">Single</option>
-						<option value="Married">Married</option>
-						<option value="Divorced">Divorced</option>
+						 <?php getcc();?>
 					</select>
 				</div>
 				

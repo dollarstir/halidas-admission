@@ -124,11 +124,14 @@ $programme=$rgo['programe'];
                                                 <br>';
                                                 if ($status=="Approved") {
 
-                                                    echo '';
+                                                    echo '<a href="dela.php?oid='.$id.'" class="btn btn-danger mb-4 mr-2">Delete</a>';
                                                     # code...
                                                 }
                                                 else {
-                                                    echo ' <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Approve</a>   ';
+                                                    echo ' <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Approve</a>  <br>
+                                                    <a href="dela.php?oid='.$id.'" class="btn btn-danger mb-4 mr-2">Delete</a><br>
+                                                    <a href="viewap.php?oid='.$id.'" class="btn btn-secondary mb-4 mr-2">View</a>
+                                                    ';
                                                 }
 
                                                 echo '
@@ -274,6 +277,35 @@ $getvol=mysqli_query($conn,"SELECT * FROM voucher  WHERE  batch='$batch' ");
                                                                                                </td>
                                             </tr>';
     }
+
+}
+
+
+
+
+function  adcourses($ctitle,$duration,$arequirement,$location,$level,$structure,$description,$fees){
+
+    include "db.php";
+
+    $ccourse= mysqli_query($conn,"SELECT * FROM programme WHERE ctitle= '$ctitle' AND level='$level' ");
+    $rcourse= mysqli_fetch_array($ccourse);
+        if ($rcourse >=1) {
+            echo' <div id="mess" style="background-color:red;"><p>Sorry Course already Exist</p></div>';
+                        
+            # code...
+        } else {
+           $adco= mysqli_query($conn,"INSERT INTO programme (ctitle,duration,arequirement,location,level,structure,description,fees) VALUES ('$ctitle','$duration','$arequirement','$location','$level','$structure','$description','$fees')  ");
+            
+                if ($adco) {
+                    echo' <div id="mess"><p>Course added successfully</p></div>';
+                        
+                } else {
+                    echo' <div id="mess" style="background-color:red;"><p>Failed to add course/p></div>';
+                }
+                
+        }
+        
+
 
 }
 

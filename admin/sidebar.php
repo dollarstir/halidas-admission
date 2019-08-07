@@ -53,9 +53,7 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                             </div>
                         </a>
                         <ul class="collapse submenu list-unstyled" id="pages" data-parent="#accordionExample">
-                            <li>
-                                <a href="#">Add Applicant</a>
-                            </li>
+                           
                             <li>
                                 <a href="vap.php"> View Applicants </a>
                             </li>
@@ -84,10 +82,10 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                     </a>
                     <ul class="collapse submenu list-unstyled" id="users" data-parent="#accordionExample">
                         <li>
-                            <a href="addvol.php"> Add Programme </a>
+                            <a href="addpro.php"> Add Programme </a>
                         </li>
                         <li>
-                            <a href="#"> View Programmes </a>
+                            <a href="view_pro.php"> View Programmes </a>
                         </li>
 
                         
