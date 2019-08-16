@@ -193,7 +193,7 @@ include "core.php";
         </div>
         <!--  END CONTENT PART  -->
     </div>
-    <!-- END MAIN CONTAINER -->
+    <!-- END MAIN CONTaAINER -->
     
     <!--  BEGIN FOOTER  -->
     <?php include 'footer.php';?>

@@ -219,10 +219,10 @@ echo '<div class="sidebar-wrapper sidebar-theme">
                         </a>
                         <ul class="collapse submenu list-unstyled" id="tables" data-parent="#accordionExample">
                             <li>
-                                <a href="table_basic.html"> Add Teacher </a>
+                                <a href="addt.php"> Add Teacher </a>
                             </li>
                             <li>
-                                <a href="table_tablesaw.html"> View Teachers</a>
+                                <a href="viewtea.php"> View Teachers</a>
                             </li>
                             
                             

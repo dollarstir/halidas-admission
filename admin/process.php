@@ -48,6 +48,58 @@ if (isset($_GET['dollar'])) {
         # code...
     }
 
+
+
+
+
+
+    if ($_GET['dollar']=="teachreg") {
+
+
+        $tname=$_POST['tname'];
+        $tdob=$_POST['tdob'];
+        $hometown=$_POST['hometown'];
+        $address=$_POST['address'];
+        $tcontact = $_POST['tcontact'];
+        $temail=$_POST['temail'];
+        $tgender= $_POST['tgender'];
+        $mstatus= $_POST['mstatus'];
+        $qualification= $_POST['qualification'];
+        $dateadded= $_POST['dateadded'];
+
+        if (empty($tname)) {
+
+            echo' <div id="mess" style="background-color:red;"><p>Please Enter Teacher\'s name</p></div>';
+        }
+        elseif (empty($tdob)) {
+            echo' <div id="mess" style="background-color:red;"><p>Enter date of birth</p></div>';
+        }
+        elseif (empty($tcontact)) {
+            echo' <div id="mess" style="background-color:red;"><p>Enter phone number</p></div>';
+        }
+        elseif (empty($qualification)) {
+            echo' <div id="mess" style="background-color:red;"><p>Enter Qualification</p></div>';
+            # code...
+        }
+        elseif (empty($temail)) {
+            echo' <div id="mess" style="background-color:red;"><p>Enter email address</p></div>';
+            # code...
+        }
+        elseif (empty($tgender)) {
+            echo' <div id="mess" style="background-color:red;"><p>Choose gender</p></div>';
+            # code...
+        }
+        elseif (empty($mstatus)) {
+            echo' <div id="mess" style="background-color:red;"><p>Choose Marital Status</p></div>';
+            # code...
+        }
+        else {
+           echo adteacher($tname,$tdob,$hometown,$address,$tcontact,$temail,$tgender,$mstatus,$qualification,$dateadded); 
+        }
+
+        # code...
+    }
+
    
 
 

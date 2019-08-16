@@ -46,5 +46,25 @@ $(document).ready(function () {
         $.ajax(optionsc);
  
     });
+
+
+
+    $(".subt").submit(function (e) {
+        e.preventDefault();
+        
+        var optionst = {
+            url: 'process.php?dollar=teachreg',
+            type: 'post',
+            data: new FormData(this),
+            cache: false,
+            processData: false,
+            contentType: false,
+         //    beforeSend: prog,
+            success: resp,
+         }
+ 
+        $.ajax(optionst);
+ 
+    });
     
 })
