@@ -374,7 +374,7 @@ $description=$rgo['description'];
                                                 <td>
                                                 
                                                
-                                                    <a href="ducc.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Edit</a>  <br>
+                                                    <a href="editco.php?oid='.$id.'" class="btn btn-success mb-4 mr-2">Edit</a>  <br>
                                                    
                                                     <a href="viewap.php?oid='.$id.'" class="btn btn-secondary mb-4 mr-2">View</a>
                                                     <a href="delc.php?oid='.$id.'" class="btn btn-danger mb-4 mr-2">Delete</a><br>
@@ -488,6 +488,27 @@ $mstatus=$rgo['mstatus'];
                                                                                              </td>
                                             </tr>';
 }
+
+}
+
+
+
+function edic($id,$ctitle,$duration,$arequirement,$location,$level,$structure,$description,$fees){
+
+    include 'db.php';
+    $edip= mysqli_query($conn,"UPDATE programme SET ctitle ='$ctitle',duration='$duration',arequirement= '$arequirement', location= '$location', level='$level', structure='$structure', description='$description', fees='$fees' WHERE id = '$id' ");
+
+    if ($edip) {
+
+        echo' <div id="mess"><p>Course updated successfully</p></div>';
+        # code...
+    } else {
+        echo' <div id="mess" style="background-color:red;"><p>Failed to update course/p></div>';
+
+    }
+    
+
+
 
 }
 
