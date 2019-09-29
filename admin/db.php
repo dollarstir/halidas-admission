@@ -1,4 +1,10 @@
 <?php
-$conn= mysqli_connect("localhost","root","","hct") or die("Please check the database connection");
+ 
+$conn=mysqli_connect("localhost","halizzsi_hct","Teamwork2019","halizzsi_hct") or die ("connection failed");
+
+
+
+
+
 
 ?>

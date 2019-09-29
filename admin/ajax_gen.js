@@ -66,5 +66,26 @@ $(document).ready(function () {
         $.ajax(optionst);
  
     });
+
+
+
+
+    $(".editbcourse").submit(function (ev) {
+        ev.preventDefault();
+        
+        var optionedio = {
+            url: 'process.php?dollar=edicos',
+            type: 'post',
+            data: new FormData(this),
+            cache: false,
+            processData: false,
+            contentType: false,
+         //    beforeSend: prog,
+            success: resp,
+         }
+ 
+        $.ajax(optionedio);
+ 
+    });
     
 })

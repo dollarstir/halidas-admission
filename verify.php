@@ -29,7 +29,7 @@ if (isset($_SESSION['serial'])) {
     <center><small>
     Email : halidas99@gmail.com</small></center><br>
     <center><small style="color:red;">
-    NB: You can only use card once so make sure u ready before u fill forms</small></center><br><br>
+    NB: You can only use card once so make sure you ready before you fill forms</small></center><br><br>
 
     <form  id="vform">
         <center><label for="">Serial Number: </label> <input type="text" name="serial" class="ipt"></center><br>

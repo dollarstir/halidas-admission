@@ -34,13 +34,15 @@ if (isset($_GET['dollar'])) {
         $doa=$dd;
         $status="Pending";
         $yoa= date("Y");
+        
+        $serial =$_POST['serial'];
 
 
 
 
 
         // check if applicant exist  in database
-        echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status,$yoa);
+        echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status,$yoa,$serial);
 
         // echo reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,$position,$rel,$s1,$c1,$start,$end,$programe,$pname,$native,$pcontact,$doa,$status);
             # code...

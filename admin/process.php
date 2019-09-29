@@ -100,6 +100,37 @@ if (isset($_GET['dollar'])) {
         # code...
     }
 
+
+
+    if ($_GET['dollar']=="edicos") {
+
+
+
+        $id = $_POST['edid'];
+        $ctitle=$_POST['ctitle'];
+        $duration=$_POST['duration'];
+        $arequirement=$_POST['arequirement'];
+        $location=$_POST['location'];
+        $level = $_POST['level'];
+        $structure=$_POST['structure'];
+        $description= $_POST['description'];
+        $fees= $_POST['fees'];
+        
+
+
+        edic($id,$ctitle,$duration,$arequirement,$location,$level,$structure,$description,$fees);
+
+
+
+
+
+
+
+
+
+
+
+    }
    
 
 

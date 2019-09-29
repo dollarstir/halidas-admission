@@ -203,6 +203,8 @@ if (!isset($_SESSION['serial'])) {
 				</div>
 			</div>
 			
+				<input type="hidden" name="serial" placeholder="" value="<?php $_SESSION['serial']; ?>">
+			
 			<div class="field-agileinfo-spc form-w3-agile-text">
 			<h6 style="font-size:17px;color:Red;">Declaration</h6>
 				<textarea name="Message" placeholder="" readonly>I wish to offer myself for admission as a student of Hali-Das College Of Technology to undertake academic program’s that I have selected, and if admitted I will observe the rule and regulations in the school. NB fees once paid are not refundable.
