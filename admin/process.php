@@ -106,6 +106,11 @@ if (isset($_GET['dollar'])) {
 
 
 
+<<<<<<< HEAD
+=======
+                
+
+>>>>>>> a017078602ade82dd2e1f97b3407ddab84db6531
         $id = $_POST['edid'];
         $ctitle=$_POST['ctitle'];
         $duration=$_POST['duration'];
