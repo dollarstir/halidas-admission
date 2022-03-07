@@ -26,10 +26,10 @@ function reg($fname,$lname,$email,$contact,$dob,$gender,$town,$nation,$sex,$pob,
             }
             else{
                 
-                $fileinfo=PATHINFO($_FILES["image"]["name"]);
-                $newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
-                move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $newFilename);
-                $pic="upload/" . $newFilename;
+                    $fileinfo=PATHINFO($_FILES["image"]["name"]);
+                    $newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
+                    move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $newFilename);
+                    $pic="upload/" . $newFilename;
                 $insert=mysqli_query($conn,"INSERT INTO applicant (fname,lname,email,contact,dob,gender,town,nation,sex,pob,position,rel,pic,s1,c1,start,end,programe,pname,native,pcontact,doa,status,yoa,serial) VALUES ('$fname','$lname','$email','$contact','$dob','$gender','$town','$nation','$sex','$pob','$position','$rel','$pic','$s1','$c1','$start','$end','$programe','$pname','$native','$pcontact','$doa','$status','$yoa','$serial')");
 
                 if ($insert) {

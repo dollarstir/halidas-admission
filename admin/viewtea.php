@@ -1,4 +1,13 @@
-<?php 
+
+<!-- 
+
+Developed by : Frederick Ennin
+
+contact : +233556676471
+email: kpin463@gmail.com
+
+ -->
+ <?php 
 session_start();
 include "db.php";
 
@@ -13,9 +22,14 @@ if (!isset($_SESSION['id']))
 
 }
 
-include "core.php";
+
 
 ?>
+
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -25,7 +39,7 @@ include "core.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Halidas College  </title>
+    <title>Pharmacy POS- Products List </title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
@@ -38,6 +52,17 @@ include "core.php";
     <link rel="stylesheet" type="text/css" href="plugins/table/datatable/datatables.css">
     <link rel="stylesheet" type="text/css" href="plugins/table/datatable/custom_dt_html5.css">
     <!-- END PAGE LEVEL CUSTOM STYLES -->
+
+     <!--  BEGIN CUSTOM STYLE FILE  -->
+     <link href="assets/css/ui-kit/buttons/creative/creative-icon-buttons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/ui-kit/buttons/creative/creative-gradients.css" rel="stylesheet" type="text/css" />
+    <?php include 'core.php';?>
+    <link href="assets/css/ui-kit/buttons/creative/creative-fill.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/ui-kit/buttons/creative/creative-material.css" rel="stylesheet" type="text/css" />
+    <!-- Spinner Buttons -->
+    <link href="assets/css/ui-kit/buttons/spinner/spinner.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/ui-kit/buttons/spinner/ladda.min.css" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->
 </head>
 <body>
     <div id="eq-loader">
@@ -51,7 +76,7 @@ include "core.php";
                 <a href="javascript:void(0);" class="nav-link sidebarCollapse" data-placement="bottom">
                     <i class="flaticon-menu-line-2"></i>
                 </a>
-            <a href="index.html" class=""> <img src="assets/img/logo-3.png" class="img-fluid" alt="logo"></a>
+            <a href="index-2.html" class=""> <img src="assets/img/logo-3.png" class="img-fluid" alt="logo"></a>
         </div>
         <ul class="nav navbar-nav">
             <li class="nav-item d-lg-none"> 
@@ -110,7 +135,6 @@ include "core.php";
             
         </ul>
     </header>
-    <!--  END NAVBAR  -->
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container" id="container">
@@ -128,13 +152,13 @@ include "core.php";
             <div class="container">
                 <!-- <div class="page-header">
                     <div class="page-title">
-                        <h3>APPLICANT LIST</h3>
+                        <h3>HTML5 Export</h3>
                         <div class="crumbs">
                             <ul id="breadcrumbs" class="breadcrumb">
-                                <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                                <li><a href="#">Venue</a></li>
-                               
-                                <li class="active"><a href="#">APPLICANT LIST</a> </li>
+                                <li><a href="index-2.html"><i class="flaticon-home-fill"></i></a></li>
+                                <li><a href="#">Tables</a></li>
+                                <li><a href="#">DataTables</a> </li>
+                                <li class="active"><a href="#">HTML5 Export</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -147,7 +171,7 @@ include "core.php";
                             <div class="widget-header">
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <u><center><h4>COURSES</h4></center></u>
+                                        <center><h4>ALL TEACHERS</h4></center>
                                     </div>                 
                                 </div>
                             </div>
@@ -155,7 +179,7 @@ include "core.php";
                                 <div class="table-responsive mb-4">
                                     <table id="html5-extension" class="table table-striped table-bordered table-hover" style="width:100%">
                                         <thead>
-                                            <tr>
+                                        <tr>
                                                 <th>ID</th>
                                                 <th>Name</th>
                                                 <th>Email</th>
@@ -172,14 +196,14 @@ include "core.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
+                                        <?php 
                                             
                                             include "db.php";
                                             echo getteachers()   ;
                                             
                                             
                                             ?>
-                                           
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -193,10 +217,31 @@ include "core.php";
         </div>
         <!--  END CONTENT PART  -->
     </div>
-    <!-- END MAIN CONTaAINER -->
+    <!-- END MAIN CONTAINER -->
     
     <!--  BEGIN FOOTER  -->
-    <?php include 'footer.php';?>
+    <footer class="footer-section theme-footer">
+
+        <div class="footer-section-1 sidebar-theme">
+            
+        </div>
+
+        <div class="footer-section-2 container-fluid">
+            <div class="row">
+                
+                <div class="col-xl-5 col-md-6 col-sm-6 col-12">
+                    <ul class="list-inline mb-0 d-flex justify-content-sm-end justify-content-center mr-sm-3 ml-sm-0 mx-3">
+                        <li class="list-inline-item  mr-3">
+                            <p class="bottom-footer">© <?php echo date("Y");?> <a target="_blank" href="#">Designed by Purple Software</a></p>
+                        </li>
+                        <li class="list-inline-item align-self-center">
+                            <div class="scrollTop"><i class="flaticon-up-arrow-fill-1"></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!--  END FOOTER  -->
 
     <!--  BEGIN CONTROL SIDEBAR  -->
@@ -1052,4 +1097,5 @@ include "core.php";
     <!-- END PAGE LEVEL CUSTOM SCRIPTS -->
 </body>
 
+<!-- Mirrored from designreset.com/preview-equation/default/table_dt_html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 May 2019 14:27:30 GMT -->
 </html>
